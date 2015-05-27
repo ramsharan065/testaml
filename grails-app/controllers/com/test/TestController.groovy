@@ -4,6 +4,6 @@ class TestController {
 
     def index() { 
     	def data = Data.first()
-    	render text: data.response
+    	render data.response
     }
 }
