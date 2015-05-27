@@ -8,6 +8,8 @@ class UrlMappings {
         }
 
         "/im/account/transfer"(controller:'test', action: 'index')
+        "/im/transaction/$txnid/accepted-default"(controller:'test', action: 'accept')
+        "/im/transaction/$txnid/rejected-default"(controller:'test', action: 'reject')
         "/"(view:"/index")
         "500"(view:'/error')
 	}
