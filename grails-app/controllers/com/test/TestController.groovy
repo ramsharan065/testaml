@@ -3,8 +3,9 @@ package com.test
 class TestController {
 
     def index() { 
-    	def data = Data.last()
-    	render data?.response
+    	//def data = Data.last()
+    	//render data?.response
+    	render '{"res":"MANUAL_REVIEW", "frd":"from own api"}'
     }
 
     def accept(){
