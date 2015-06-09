@@ -1,5 +1,7 @@
 package com.test
 
+import testaml.*
+
 class TestController {
 
     def index() { 
