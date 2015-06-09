@@ -17,18 +17,12 @@ class TestController {
     }
 
     def idology(){
-        render '''<?xml version="1.0"?>
-<response>
-    <id-number>1124550715</id-number>
-    <summary-result>
-        <key>id.success</key>
-        <message>PASS</message>
-    </summary-result>
-    <results>
-        <key>result.match</key>
-        <message>ID Located</message>
-    </results>
-    <id-scan>no</id-scan>
-</response>'''
+        def data = Idology.last()
+        render data?.response
+    }
+
+    def idologyAnswerResponse(){
+        def data = IdologyAnswer.last()
+        render data?.response
     }
 }
