@@ -19,9 +19,7 @@ class TestController {
     }
 
     def idology(){
-        //def data = Idology.last()
-        //render data?.response
-        render '''<?xml version="1.0"?>
+        def defaultResponse = '''<?xml version="1.0"?>
 <response>
     <id-number>1124550715</id-number>
     <summary-result>
@@ -34,6 +32,9 @@ class TestController {
     </results>
     <id-scan>no</id-scan>
 </response>'''
+
+        def data = Idology.last()
+        render data?.response ?: defaultResponse
     }
 
     def idologyAnswerResponse(){
